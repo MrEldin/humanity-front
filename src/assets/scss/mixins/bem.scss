@@ -1,0 +1,56 @@
+@mixin e($element) {
+  &__#{$element} {
+    @content
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content
+  }
+}
+
+@mixin background($first: rgba(103,181,219,1), $second: rgba(20,115,206,1)) {
+  background: $first; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, $first 0%, $second 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, $first 0%,$second 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, $first 0%,$second 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67b5db', endColorstr='#1473ce',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin box-shadow() {
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(210, 210, 210, 0.37);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(210, 210, 210, 0.37);
+  box-shadow: 0px 0px 1px 1px rgba(210, 210, 210, 0.37);
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin transition-property($property...) {
+  -moz-transition-property:    $property;
+  -o-transition-property:      $property;
+  -webkit-transition-property: $property;
+  transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+  -moz-transition-property:    $duration;
+  -o-transition-property:      $duration;
+  -webkit-transition-property: $duration;
+  transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function:    $timing;
+  -o-transition-timing-function:      $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+  -moz-transition-delay:    $delay;
+  -o-transition-delay:      $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay:         $delay;
+}

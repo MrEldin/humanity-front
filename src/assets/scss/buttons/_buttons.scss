@@ -1,0 +1,76 @@
+.n-button {
+  background-color: transparent;
+  border: 2px solid $contrast_color;
+  color: #fff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  padding: 0 20px;
+  transition: 1s background-color, color;
+
+  &:hover {
+    color: #fff;
+    background-color: $contrast_color;
+    border-color: #ffffff;
+  }
+}
+
+.n-button-xl {
+  padding: 20px 40px;
+}
+
+.smart-button {
+  margin: 0 10px;
+  width: auto;
+  height: 30px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &.blue {
+    border-color: $dashboardBackgroundLight;
+
+    p {
+      color: $dashboardBackgroundLight;
+      margin-right: 20px;
+    }
+
+    i {
+      color: $dashboardBackgroundLight;
+    }
+  }
+
+  p {
+    color: #ffffff;
+    margin-right: 20px;
+  }
+
+  i {
+    font-size: 25px;
+    color: #ffffff;
+  }
+
+  &:hover {
+    border-color: #b4b4b4;
+  }
+}
+
+@media screen and ($largeTablets) {
+  .smart-button {
+    height: 25px;
+    padding: 15px;
+
+    p {
+      white-space:nowrap;
+      font-size: 12px;
+    }
+
+    i {
+      font-size: 17px;
+    }
+  }
+}
