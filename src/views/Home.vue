@@ -4,7 +4,7 @@
             section.graph
                 line-chart-tab
             section
-                section.side
+                section.side(v-if="$auth.check('create-vacation')")
                     .item-body
                         .item
                             .item__header
@@ -185,7 +185,7 @@ export default {
 
                 p {
                     position: absolute;
-                    font-size: 60px;
+                    font-size: 50px;
                     color: $dashboardBackgroundLight;
                     font-family: Montserrat;
                 }

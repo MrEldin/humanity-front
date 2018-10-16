@@ -1,5 +1,5 @@
 export default {
-  localPath: `http://localhost/api/`,
+  localPath: `http://api.eldin.me/api/`,
   vacations: [],
   totalVacations: []
 }
